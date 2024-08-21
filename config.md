@@ -1,4 +1,4 @@
-[title]: <> (Vitalik Buterin's website)
-[icon]: <> (http://vitalik.ca/images/icon.png)
+[title]: <> (Freedom Technology)
 [domain](http://localhost)
 [posts_directory](./posts)
+[icon]('')
