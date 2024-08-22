@@ -49,19 +49,24 @@ MathJax = {
 
 <style>
 </style>
+        <div class="outer">
+            <div id="doc" class="container-fluid markdown-body comment-enabled" data-hard-breaks="true">
 
-<div id="doc" class="container-fluid markdown-body comment-enabled" data-hard-breaks="true">
-
-<div id="color-mode-switch">
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-  </svg>
-  <input type="checkbox" id="switch" />
-  <label for="switch">Dark Mode Toggle</label>
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-  </svg>
-</div>
+            <div id="color-mode-switch">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+                <input type="checkbox" id="switch" />
+                <label for="switch">Dark Mode Toggle</label>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+            </div>
+        </div>
+    <div class="left">
+        <img src="$root/images/transparent_logo.png" alt="Logo" class="left-image" />
+    </div>
+    <div class="right">
 """
 
 TOGGLE_COLOR_SCHEME_JS = """
@@ -131,8 +136,7 @@ FOOTER = """ </div> """
 TOC_START = """
 
 <br>
-<ul class="post-list" style="padding-left:0">
-
+    <ul class="post-list" style="padding-left:0">
 """
 
 TOC_END = """ </ul> """
@@ -145,7 +149,7 @@ TOC_ITEM_TEMPLATE = """
       <a class="post-link" href="{}">{}</a>
     </h3>
 </li>
-
+</div>
 """
 
 TWITTER_CARD_TEMPLATE = """
@@ -278,15 +282,13 @@ def make_toc(toc_items, global_config, all_categories, category=None):
     else:
         title = global_config['title']
         root_path = '.'
-
     return (
-        PRE_HEADER +
         RSS_LINK.format(root_path, title) +
-        HEADER_TEMPLATE.replace('$root', root_path) +
+        HEADER_TEMPLATE.replace("$root", root_path).replace("$title", title) + 
         TOGGLE_COLOR_SCHEME_JS +
         make_twitter_card(title, global_config) +
-        TOC_TITLE_TEMPLATE.format(title) +
-        make_categories_header(all_categories, root_path) +
+        # TOC_TITLE_TEMPLATE.format(title) +
+        # make_categories_header(all_categories, root_path) +
         TOC_START +
         ''.join(toc_items) +
         TOC_END

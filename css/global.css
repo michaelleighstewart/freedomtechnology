@@ -208,3 +208,26 @@ html.dark #doc img.invert {
 #color-mode-switch label:active:after {
   width: 30px;
 }
+
+.outer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  flex: 1;
+  width: 50%;
+}
+
+.right {
+  flex: 1;
+  display: block;
+}
+
+.right-inner {
+  display: block;
+}
+
+.left-image {
+  width: 100%;
+}
