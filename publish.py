@@ -49,8 +49,9 @@ MathJax = {
 
 <style>
 </style>
-        <div class="outer">
-            <div id="doc" class="container-fluid markdown-body comment-enabled" data-hard-breaks="true">
+<div class="header">
+    <div class="header-left">
+        <div id="doc" class="container-fluid markdown-body comment-enabled" data-hard-breaks="true">
 
             <div id="color-mode-switch">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -63,6 +64,12 @@ MathJax = {
                 </svg>
             </div>
         </div>
+    </div>
+    <div class="header-right">
+        <span class="toc-category" style="font-size:24px"><a href="$root/index.html">Home</a></span>
+    </div>
+</div>
+<div class="outer">
     <div class="left">
         <img src="$root/images/transparent_logo.png" alt="Logo" class="left-image" />
     </div>
@@ -112,22 +119,31 @@ RSS_LINK = """
 
 """
 
+# TITLE_TEMPLATE = """
+# 
+# <br>
+# <h1 style="margin-bottom:7px"> {0} </h1>
+# <small style="float:left; color: #888"> {1} </small>
+# <small style="float:right; color: #888"><a href="{2}/index.html">See all posts</a></small>
+# <br> <br> <br>
+# <title> {0} </title>
+# 
+# """
+
 TITLE_TEMPLATE = """
 
 <br>
 <h1 style="margin-bottom:7px"> {0} </h1>
 <small style="float:left; color: #888"> {1} </small>
-<small style="float:right; color: #888"><a href="{2}/index.html">See all posts</a></small>
 <br> <br> <br>
 <title> {0} </title>
 
 """
 
+
 TOC_TITLE_TEMPLATE = """
 
 <title> {0} </title>
-<br>
-<center><h1 style="border-bottom:0px"> {0} </h1></center>
 
 """
 
@@ -287,7 +303,7 @@ def make_toc(toc_items, global_config, all_categories, category=None):
         HEADER_TEMPLATE.replace("$root", root_path).replace("$title", title) + 
         TOGGLE_COLOR_SCHEME_JS +
         make_twitter_card(title, global_config) +
-        # TOC_TITLE_TEMPLATE.format(title) +
+        TOC_TITLE_TEMPLATE.format(title) +
         # make_categories_header(all_categories, root_path) +
         TOC_START +
         ''.join(toc_items) +

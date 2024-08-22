@@ -155,7 +155,7 @@ html.dark #doc img.invert {
 #color-mode-switch {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 #color-mode-switch > span {
@@ -230,4 +230,25 @@ html.dark #doc img.invert {
 
 .left-image {
   width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-left {
+  flex: none;
+}
+
+.header-right {
+  width: 50%;
+  padding-top: 35px;
+}
+
+@media (max-width: 768px) {
+  .outer {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
 }
