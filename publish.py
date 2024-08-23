@@ -344,7 +344,7 @@ if __name__ == '__main__':
             TITLE_TEMPLATE.format(metadata['title'], get_printed_date(metadata), root_path) +
             defancify(open('/tmp/temp_output.html').read()) +
             FOOTER
-        )
+        ).replace('$root', root_path)
 
         print("Path selected: {}".format(path))
 

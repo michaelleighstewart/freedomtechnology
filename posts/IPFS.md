@@ -4,6 +4,9 @@
 
 <h2>Introduction</h2>
 <p>Currently, web hosting is entirely centralized, from the infrastructure and file hosting to DNS. We introduce an alternative solution, using IPFS and Fleek.xyz for infrastructure and file hosting, and ENS  for decentralized DNS and routing.</p>
+<br />
+<img class="blog-image" src="$root/images/ipfs_network.jpg"></img>
+<br />
 <br /><hr /><br />
 
 <h2>What is IPFS?</h2>
