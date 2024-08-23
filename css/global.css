@@ -216,7 +216,6 @@ html.dark #doc img.invert {
 
 .left {
   position: fixed;
-  top: 0;
   left: 0;
   z-index: 1000;
   flex: 1;
