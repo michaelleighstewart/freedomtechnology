@@ -118,6 +118,8 @@ TOGGLE_COLOR_SCHEME_JS = """
 RSS_LINK = """
 
 <link rel="alternate" type="application/rss+xml" href="{}/feed.xml" title="{}">
+<meta name="description" content="Towards a decentralized internet with self-sovereign participants"> 
+
 
 """
 
