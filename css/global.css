@@ -215,6 +215,10 @@ html.dark #doc img.invert {
 }
 
 .left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   flex: 1;
   width: 50%;
 }
@@ -223,6 +227,8 @@ html.dark #doc img.invert {
   flex: 1;
   display: block;
   padding: 50px;
+  width: 50%;
+  padding-left: 50%;
 }
 
 .right-inner {

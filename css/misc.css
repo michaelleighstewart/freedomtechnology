@@ -53,6 +53,15 @@
       text-align: center;
       padding-right: 175px;
     }
+
+    .left {
+      position: relative;
+    }
+
+    .right {
+      width: auto;
+      padding-left: 50px;
+    }
 }
 
 

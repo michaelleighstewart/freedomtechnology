@@ -3,7 +3,7 @@
 [title]: <> (Decentralized Web Hosting With IPFS)
 
 <h2>Introduction</h2>
-<p>Currently, web hosting is entirely centralized, from the infrastructure and file hosting to DNS. We introduce an alternative solution, using IPFS and Fleek.xyz for infrastructure and file hosting, and ENS  for decentralized DNS and routing.</p>
+<p>Currently, web hosting is entirely centralized, from the infrastructure and file hosting to DNS. We introduce an alternative solution, using IPFS, a decentralized file storage and retrieval protocol and <a href="https://fleek.xyz/" target="_new">fleek.xyz</a> for infrastructure and file hosting, along with ENS for decentralized DNS and routing.</p>
 <br />
 <img class="blog-image" src="$root/images/ipfs_network.jpg"></img>
 <br />
@@ -27,18 +27,45 @@
 <p>The fleek platform itself offers much of the functionality you would like for building a web application, including CI/CD and automated deployments, managing domains and of course file storage. There are also some exciting new features in the works including Audit Log and Analytics. Keep in mind when using the platform that it is not as mature as something like AWS. The platform itself is of course open-source so that anyone can contribute to it.</p>
 <br /><hr /><br />
 
-<h2>Setup</h2>
-<p>Setup will be here</p>
-<br /><hr /><br />
-
 <h2>ENS</h2>
-<p>ENS will be here</p>
+<p>Ethereum Name Service (ENS) is a decentralized and open-source domain protocol built on the Ethereum blockchain. This protocol allows users to translate human-readable names like freedomtechnology.eth into machine-readable identifiers, such as Ethereum addresses for transfer of value, content hashes for file hosting and other metadata. This reduces the barrier to entry for new cryptocurrency users when sending or receiving funds, and using decentralized applications (dApps).</p>
+
+<p>ENS offers a decentralized alternative to the traditional Domain Name System (DNS), the main protocol for addressing and routing used on the internet today. On top of the benefits of decentralization, ENS also provided enhanced security, true self-sovereignty and of course censorship resistance. Under the covers, ENS names are actually non-fungible tokens (NFTs) that users can register, manage, renew and trade. ENS can be utilized for a form of decentralized identity, enabling users to link other information, such as email address, social media profiles or their website. We will be using it for identifying and routing our website to freedomtechnology.eth.
 <br /><hr /><br />
 
-<h2>Considerations</h2>
-<p>Considerations will be here</p>
-<br /><hr /><br />
+<h2>Setup</h2>
+<p>First, head over to <a href="https://fleek.xyz/" target="_new">fleek.xyz</a> and take a read through their documentation and resources before signing up. Once we have signed up, head over to sites and add a new site from the list of templates. There are several different templates to choose from, including Nuxt, React and Vue boilerplates.For the sake of this example, we are going to use the *Blogmaker by Vitalik* template.</p>
+
+<br />
+<img class="blog-image" src="$root/images/fleek01.png"></img>
+<br /><br />
+
+<p>Once the Blogmaker template has been selected, click the "Deploy Template" button. You will then be guided through a wizard to deploy this template, with the first step being to select your Git provider of choice. Set the name for the repository and then go ahead and create and deploy this template.</p>
+
+<br />
+<img class="blog-image" src="$root/images/fleek02.png"></img>
+<br /><br />
+
+<p>Your git repository will be created, along with your website within the fleek platform, and the first build and deploy will be automatically kicked off. We can view the status and logs of this deployment from the Deploys tab. Once the site has been built and deployed, we should be given an on-fleek URL in which to access it.
+
+<br />
+<img class="blog-image" src="$root/images/fleek03.png"></img>
+<br /><br />
+
+<p>Clone the git repository and explore the code. Blog posts are written using <a href="https://daringfireball.net/projects/markdown/syntax" target="_new">markup</a>, practice writing a new blog post and deploy it by pushing to the remote repository and clicking Redeploy in fleek.</p>
+
+<p>In the fleek platform, navigate to Settings > Domains. From here, we can connect any centralized DNS or decentralized ENS domains. After adding either, you will be required to add an CNAME (for subdomain) or ALIAS (for root domain) entry in DNS or a Content Hash in ENS. For ENS, the website will be accessible at yourname.eth.limo, for instance <a href="https://freedomtechnology.eth.limo/" target="_new">freedomtechnology.eth.limo</a>. You will be required to pay a small amount of ethereum (gas) for any actions in ENS, since it it built on top of the Ethereum blockchain.</p>
+
+<p>We have now built and deployed a simple blog website from a template to a decentralized webserver using IPFS!</p>
+
+<br />
+<img class="blog-image" src="$root/images/fleek04.png"></img>
+<br /><br />
 
 <h2>Further Reading</h2>
-<p>Further reading will be here</p>
+<ul>
+    <li><a href="https://en.wikipedia.org/wiki/InterPlanetary_File_System" target="_new">What is IPFS?</a></li>
+    <li><a href="https://fleek.xyz/" target="_new">Fleek Website</a></li>
+    <li><a href="https://ens.domains/" target="_new">Register an ENS Address</li>
+</ul>
 <br /><hr /><br />
