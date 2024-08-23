@@ -6,6 +6,7 @@ PRE_HEADER = """
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8">
+<meta name="description" content="Towards a decentralized internet with self-sovereign participants"> 
 <style>
 @media (prefers-color-scheme: dark) {
     body {
