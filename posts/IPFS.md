@@ -12,7 +12,7 @@
 <h2>What is IPFS?</h2>
 <p>IPFS stands for InterPlanetary File System and is a protocol for decentralized, peer-to-peer file sharing. Essentially all websites on the internet today, rely on centralized infrastructure, cloud and DNS providers for hosting. As we move from what is widely understood as Web2 to Web3, which embodies an ideology of decentralization and censorship resistance, it is important to work towards decentralizing this aspect of the internet.
 
-<p>The protocol is similar to BitTorrentor a blockchain, in that information is stored and shared across decentralized nodes, however it is important to differentiate these different technologies.</p>
+<p>The protocol is similar to BitTorrentor or a blockchain, in that information is stored and shared across decentralized nodes, however it is important to differentiate these different technologies.</p>
 
 <p>In order to upload a file to the network, we first must gain access to one of these nodes. We can either use a service that provides this acess, or we can run a local client of an IPFS node. The upload process involves creating a has of the file, using a hashing algorithm like SHA-256, which will be used as an identifier for that file, also called a CID (content ID). It is important to understand that once the file is uploaded, it is *immutable*, uploading a modified version will create a new hash and be logically separate from the original file.</p>
 
