@@ -31,6 +31,7 @@ HEADER_TEMPLATE = """
 <link rel="stylesheet" type="text/css" href="$root/css/pretty-vendor.83ac49e057c3eac4fce3.css">
 <link rel="stylesheet" type="text/css" href="$root/css/global.css">
 <link rel="stylesheet" type="text/css" href="$root/css/misc.css">
+<link rel="icon" type="image/x-icon" href="$root/images/favicon.ico">
 
 <script type="text/x-mathjax-config">
 <script>
@@ -293,17 +294,17 @@ def make_toc_item(global_config, metadata, root_path):
 
 def make_toc(toc_items, global_config, all_categories, category=None):
     if category:
-        title = category.capitalize()
+        title = global_config['title'] + " | " + category.capitalize()
         root_path = '..'
     else:
-        title = global_config['title']
+        title = global_config['title'] + " | Home"
         root_path = '.'
     return (
         RSS_LINK.format(root_path, title) +
         HEADER_TEMPLATE.replace("$root", root_path).replace("$title", title) + 
         TOGGLE_COLOR_SCHEME_JS +
         make_twitter_card(title, global_config) +
-        TOC_TITLE_TEMPLATE.format(title) +
+        TOC_TITLE_TEMPLATE.format(title, global_config["title"]) +
         # make_categories_header(all_categories, root_path) +
         TOC_START +
         ''.join(toc_items) +
@@ -341,7 +342,7 @@ if __name__ == '__main__':
             HEADER_TEMPLATE.replace('$root', root_path) +
             TOGGLE_COLOR_SCHEME_JS +
             make_twitter_card(metadata['title'], global_config) +
-            TITLE_TEMPLATE.format(metadata['title'], get_printed_date(metadata), root_path) +
+            TITLE_TEMPLATE.format(global_config['title'] + " | " + metadata['title'], get_printed_date(metadata), root_path) +
             defancify(open('/tmp/temp_output.html').read()) +
             FOOTER
         ).replace('$root', root_path)
