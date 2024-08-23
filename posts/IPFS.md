@@ -4,19 +4,38 @@
 
 <h2>Introduction</h2>
 <p>Currently, web hosting is entirely centralized, from the infrastructure and file hosting to DNS. We introduce an alternative solution, using IPFS and Fleek.xyz for infrastructure and file hosting, and ENS  for decentralized DNS and routing.</p>
+<br /><hr /><br />
 
 <h2>What is IPFS?</h2>
-<p>IPFS stands for InterPlanetary File System and is a protocol for decentralized, peer-to-peer file sharing. The protocol is similar to BitTorrent.
+<p>IPFS stands for InterPlanetary File System and is a protocol for decentralized, peer-to-peer file sharing. Essentially all websites on the internet today, rely on centralized infrastructure, cloud and DNS providers for hosting. As we move from what is widely understood as Web2 to Web3, which embodies an ideology of decentralization and censorship resistance, it is important to work towards decentralizing this aspect of the internet.
+
+<p>The protocol is similar to BitTorrentor a blockchain, in that information is stored and shared across decentralized nodes, however it is important to differentiate these different technologies.</p>
+
+<p>In order to upload a file to the network, we first must gain access to one of these nodes. We can either use a service that provides this acess, or we can run a local client of an IPFS node. The upload process involves creating a has of the file, using a hashing algorithm like SHA-256, which will be used as an identifier for that file, also called a CID (content ID). It is important to understand that once the file is uploaded, it is *immutable*, uploading a modified version will create a new hash and be logically separate from the original file.</p>
+
+<p>When a client wants to access this file on the IPFS network, we make a query to a self hosted node or via a gateway from a provider. The node will then query it's peers for the file, and once it reaches a node that stores the file, it can then be accessed and delivered to the client. This process is fundamentally different from traditional web hosting; where we use domains that map to IP addresses in order to access content, IPFS locates files using a hash, the terminology here is called location addressing for the traditional, centralized method and content-based addressing for this new, decentralized file hosting. When a node queries and retrieves a file from another node, it will also make a copy of that file locally and index that file for ease of access. If the file is not used in a long time, it gets deleted through the garbage collection of the node, which can in fact be overriden when self-hosting a node and using a pinning service.</p>
+
+<p>IPFS offers us a decentralized file access that has been used as the underlying mechanism for several different services, including hosting a webserver, offered by fleek.xyz, which we will now begin to dive into.</p>
+<br /><hr /><br />
 
 <h2>What is Fleek?</h2>
+<p>Fleek is a decentralized webhosting solution built on top of IPFS, allowing developers an alternative to building and deploying applications away from centralized cloud infrastructure providers such as AWS, Azure and GCP. It currently works with a range of popular web frameworks, such as Next.js and React. Recently, fleek has also introduced <a href="https://fleek.xyz/blog/announcements/introducing-fleek-functions/" target="_new">functions</a>, for executing server-side code. At the time of writing, hosting full back-end servers, apart from the back-end API offered through a full-stack Next.js application is not currently supported, although functions may be used to achieve some server-side functionality for a client.</p>
+
+<p>The fleek platform itself offers much of the functionality you would like for building a web application, including CI/CD and automated deployments, managing domains and of course file storage. There are also some exciting new features in the works including Audit Log and Analytics. Keep in mind when using the platform that it is not as mature as something like AWS. The platform itself is of course open-source so that anyone can contribute to it.</p>
+<br /><hr /><br />
 
 <h2>Setup</h2>
 <p>Setup will be here</p>
-
+<br /><hr /><br />
 
 <h2>ENS</h2>
+<p>ENS will be here</p>
+<br /><hr /><br />
 
 <h2>Considerations</h2>
-
+<p>Considerations will be here</p>
+<br /><hr /><br />
 
 <h2>Further Reading</h2>
+<p>Further reading will be here</p>
+<br /><hr /><br />

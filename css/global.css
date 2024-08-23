@@ -222,6 +222,7 @@ html.dark #doc img.invert {
 .right {
   flex: 1;
   display: block;
+  padding: 50px;
 }
 
 .right-inner {
