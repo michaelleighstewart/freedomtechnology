@@ -26,7 +26,7 @@ PRE_HEADER = """
 HOME_IMAGE = """
 <head>
     <meta name="description" content="Towards a decentralized internet with self-sovereign participants - Extra" /> 
-    <meta name="image" property="og:image" content="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" />
+    <meta name="image" property="og:image" content="https://www.freedomtechnology.org/images/logo.jpg" />
     <meta property="og:type" content="website" />
 </head>
 """
