@@ -106,7 +106,11 @@ TOGGLE_COLOR_SCHEME_JS = """
     // Default to light for first view
     if (colorScheme === null || colorScheme === undefined) localStorage.setItem('colorScheme', 'dark');
     // If previously saved to dark, toggle switch and update colors
-    if (colorScheme === 'light') {
+    if (colorScheme === 'dark') {
+      toggle.checked = true;
+      toggleDarkMode();
+    }
+    else if (colorScheme === null || colorScheme === unddefined) {
       toggle.checked = true;
       toggleDarkMode();
     }
