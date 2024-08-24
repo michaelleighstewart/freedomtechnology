@@ -74,6 +74,7 @@ MathJax = {
 <div class="outer">
     <div class="left">
         <img src="$root/images/transparent_logo.png" alt="Logo" class="left-image"></img>
+        <img src="$root/images/logo.jpg" alt="Logo2" class="left-image"></img>
     </div>
     <div class="right">
 """
@@ -178,7 +179,7 @@ TOC_ITEM_TEMPLATE = """
 TWITTER_CARD_TEMPLATE = """
 <meta property="og:title" content="{0}" />
 <meta property="og:description" content="Towards a decentralized internet with self-sovereign participants" />
-<meta property="og:image" content="$root/images/logo.jpg" />
+<meta property="og:image" content="https://www.freedomtechnology.org/images/logo.jpg" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="{0}" />
 <meta name="twitter:description" content="Towards a decentralized internet with self-sovereign participants" />
