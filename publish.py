@@ -307,17 +307,23 @@ def make_toc_item(global_config, metadata, root_path):
 
 
 def make_toc(toc_items, global_config, all_categories, category=None):
+    print("category is....")
+    print(category)
     if category:
         title = global_config['title'] + " | " + category.capitalize()
         title_simple = global_config['title'] + " | " + category.capitalize()
         root_path = '..'
+        abs_root_path = '.'
     else:
         title = global_config['title'] + " | Home"
         title_simple = title = global_config['title']
         root_path = '.'
+        abs_root_path = '.'
+    print("root path is....")
+    print(root_path)
     result = (
         PRE_HEADER +
-        HOME_HEAD_TAGS.replace('$root', root_path) +
+        HOME_HEAD_TAGS.replace('$root', abs_root_path) +
         make_twitter_card(title_simple, global_config, root_path) +
         RSS_LINK.format(root_path, title_simple) +
         HEADER_TEMPLATE.replace("$root", root_path).replace("$title", title) + 
@@ -330,6 +336,8 @@ def make_toc(toc_items, global_config, all_categories, category=None):
         TOC_END +
         FOOTER
     )
+    print("RESULT IS....")
+    print(result)
     return result
 
 
