@@ -60,7 +60,7 @@
 
 <br />
 <img class="blog-image" src="$root/images/fleek04.png"></img>
-<br /><br />
+<br /><hr /><br />
 
 <h2>Further Reading</h2>
 <ul>
