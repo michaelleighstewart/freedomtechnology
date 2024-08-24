@@ -110,6 +110,10 @@ TOGGLE_COLOR_SCHEME_JS = """
       toggle.checked = true;
       toggleDarkMode();
     }
+    else if (colorScheme === null || colorScheme === unddefined) {
+      toggle.checked = true;
+      toggleDarkMode();
+    }
   }
   checkColorScheme();
 </script>
@@ -309,6 +313,7 @@ def make_toc(toc_items, global_config, all_categories, category=None):
         title_simple = title = global_config['title']
         root_path = '.'
     return (
+        PRE_HEADER +
         RSS_LINK.format(root_path, title_simple) +
         HEADER_TEMPLATE.replace("$root", root_path).replace("$title", title) + 
         TOGGLE_COLOR_SCHEME_JS +
