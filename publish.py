@@ -155,7 +155,7 @@ TOC_TITLE_TEMPLATE = """
 
 """
 
-FOOTER = """ </div> """
+FOOTER = """ </div> </div> </html> """
 
 TOC_START = """
 <br>
@@ -172,7 +172,6 @@ TOC_ITEM_TEMPLATE = """
       <a class="post-link" href="{}">{}</a>
     </h3>
 </li>
-</div>
 """
 
 TWITTER_CARD_TEMPLATE = """
@@ -321,7 +320,8 @@ def make_toc(toc_items, global_config, all_categories, category=None):
         # make_categories_header(all_categories, root_path) +
         TOC_START.replace("$root", root_path) +
         ''.join(toc_items) +
-        TOC_END
+        TOC_END +
+        FOOTER
     )
     print("RESULT IS.....")
     print(result)
@@ -359,8 +359,8 @@ if __name__ == '__main__':
             TOGGLE_COLOR_SCHEME_JS +
             make_twitter_card(metadata['title'], global_config, root_path) +
             TITLE_TEMPLATE.format(global_config['title'] + " | " + metadata['title'], get_printed_date(metadata), root_path) +
-            defancify(open('/tmp/temp_output.html').read())# +
-            # FOOTER
+            defancify(open('/tmp/temp_output.html').read()) +
+            FOOTER
         ).replace('$root', root_path)
 
         print("Path selected: {}".format(path))
