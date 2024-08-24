@@ -33,8 +33,6 @@ HOME_HEAD_TAGS = """
 
 ARTICLE_HEAD_TAGS = """
 <head>
-    <meta name="description" content="{1}" /> 
-    <meta property="og:description" content="{1}" /> 
     <meta name="title" content="{0}" />
     <meta property="og:title" content="{0}" /> 
     <meta property="og:type" content="article" />
