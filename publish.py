@@ -31,6 +31,17 @@ HOME_HEAD_TAGS = """
 </head>
 """
 
+ARTICLE_HEAD_TAGS = """
+<head>
+    <meta name="description" content="Test Desc" /> 
+    <meta property="og:description" content="Test Desc 2" /> 
+    <meta name="title" content="Test Title" />
+    <meta property="og:title" content="Test Title 2" /> 
+    <meta name="image" property="og:image" content="/images/logo.jpg" />
+    <meta property="og:type" content="article" />
+</head>
+"""
+
 HEADER_TEMPLATE = """
 
 <link rel="stylesheet" type="text/css" href="$root/css/common-vendor.b8ecfc406ac0b5f77a26.css">
@@ -182,11 +193,9 @@ TOC_ITEM_TEMPLATE = """
 """
 
 TWITTER_CARD_TEMPLATE = """
-<meta property="og:title" content="{0}" />
-<meta property="og:description" content="Towards a decentralized internet with self-sovereign participants" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="{0}" />
-<meta name="twitter:description" content="Towards a decentralized internet with self-sovereign participants" />
+<meta name="twitter:description" content="Towards a decentralized internet with self-sovereign participants 3" />
 """
 
 
@@ -307,8 +316,6 @@ def make_toc_item(global_config, metadata, root_path):
 
 
 def make_toc(toc_items, global_config, all_categories, category=None):
-    print("category is....")
-    print(category)
     if category:
         title = global_config['title'] + " | " + category.capitalize()
         title_simple = global_config['title'] + " | " + category.capitalize()
@@ -319,8 +326,6 @@ def make_toc(toc_items, global_config, all_categories, category=None):
         title_simple = title = global_config['title']
         root_path = '.'
         abs_root_path = '.'
-    print("root path is....")
-    print(root_path)
     result = (
         PRE_HEADER +
         HOME_HEAD_TAGS.replace('$root', abs_root_path) +
@@ -336,8 +341,6 @@ def make_toc(toc_items, global_config, all_categories, category=None):
         TOC_END +
         FOOTER
     )
-    print("RESULT IS....")
-    print(result)
     return result
 
 
@@ -367,6 +370,7 @@ if __name__ == '__main__':
         root_path = '../../../..'
         total_file_contents = (
             PRE_HEADER +
+            ARTICLE_HEAD_TAGS.replace('$root', root_path) +
             RSS_LINK.format(root_path, metadata['title']) +
             HEADER_TEMPLATE.replace('$root', root_path) +
             TOGGLE_COLOR_SCHEME_JS +
