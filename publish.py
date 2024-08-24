@@ -73,7 +73,7 @@ MathJax = {
 </div>
 <div class="outer">
     <div class="left">
-        <img src="$root/images/transparent_logo.png" alt="Logo" class="left-image" />
+        <img src="$root/images/transparent_logo.png" alt="Logo" class="left-image"></img>
     </div>
     <div class="right">
 """
@@ -158,7 +158,7 @@ TOC_TITLE_TEMPLATE = """
 FOOTER = """ </div> """
 
 TOC_START = """
-
+<img src="$root/images/transparent_logo.png" class="left-image"></img>
 <br>
     <ul class="post-list" style="padding-left:0">
 """
@@ -318,7 +318,7 @@ def make_toc(toc_items, global_config, all_categories, category=None):
         make_twitter_card(title_simple, global_config, root_path) +
         TOC_TITLE_TEMPLATE.format(title, global_config["title"]) +
         # make_categories_header(all_categories, root_path) +
-        TOC_START +
+        TOC_START.replace("$root", root_path) +
         ''.join(toc_items) +
         TOC_END
     )
