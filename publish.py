@@ -33,11 +33,6 @@ HEADER_TEMPLATE = """
 <link rel="stylesheet" type="text/css" href="$root/css/global.css">
 <link rel="stylesheet" type="text/css" href="$root/css/misc.css">
 <link rel="icon" type="image/x-icon" href="$root/images/favicon.ico">
-<meta property="og:title" content="Freedom Technology">
-<meta property="og:description" content="Towards a decentralized internet with self-sovereign participants">
-<meta property="og:image" content="https://www.freedomtechnology.org/images/transparent_logo.png">
-<meta property="og:url" content="https://freedomtechnology.org">
-<meta property="og:type" content="website">
 
 <script type="text/x-mathjax-config">
 <script>
@@ -115,10 +110,6 @@ TOGGLE_COLOR_SCHEME_JS = """
       toggle.checked = true;
       toggleDarkMode();
     }
-    else if (colorScheme === null || colorScheme === unddefined) {
-      toggle.checked = true;
-      toggleDarkMode();
-    }
   }
   checkColorScheme();
 </script>
@@ -185,8 +176,6 @@ TWITTER_CARD_TEMPLATE = """
 <meta property="og:title" content="{0}">
 <meta property="og:description" content="Towards a decentralized internet with self-sovereign participants">
 <meta property="og:image" content="https://www.freedomtechnology.org/images/transparent_logo.png">
-<meta property="og:url" content="https://freedomtechnology.org">
-<meta property="og:type" content="website">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="{0}" />
 <meta name="twitter:image" content="https://www.freedomtechnology.org/images/transparent_logo.png" />
