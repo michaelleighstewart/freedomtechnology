@@ -34,6 +34,7 @@ HOME_HEAD_TAGS = """
 ARTICLE_HEAD_TAGS = """
 <head>
     <meta name="title" content="{0}" />
+    <meta name="image" property="og:image" content="/images/logo.jpg" />
     <meta property="og:title" content="{0}" /> 
     <meta property="og:type" content="article" />
 </head>
