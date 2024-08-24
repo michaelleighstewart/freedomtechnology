@@ -2,7 +2,6 @@
 [date]: <> (2024/08/22)
 [title]: <> (Decentralized Web Hosting With IPFS)
 
-<h2>Introduction</h2>
 <p>Currently, web hosting is entirely centralized, from the infrastructure and file hosting to DNS. We introduce an alternative solution, using IPFS, a decentralized file storage and retrieval protocol and <a href="https://fleek.xyz/" target="_new">fleek.xyz</a> for infrastructure and file hosting, along with ENS for decentralized DNS and routing.</p>
 <br />
 <img class="blog-image" src="$root/images/ipfs_network.jpg"></img>
