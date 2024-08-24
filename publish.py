@@ -26,7 +26,7 @@ PRE_HEADER = """
 HOME_HEAD_TAGS = """
 <head>
     <meta name="description" content="Towards a decentralized internet with self-sovereign participants" /> 
-    <meta name="image" property="og:image" content="$root/images/logo.jpg" />
+    <meta name="image" property="og:image" content="/images/logo.jpg" />
     <meta property="og:type" content="website" />
 </head>
 """
