@@ -158,7 +158,6 @@ TOC_TITLE_TEMPLATE = """
 FOOTER = """ </div> </div> </html> """
 
 TOC_START = """
-<img src="$root/images/logo.jpg" />
 <br>
     <ul class="post-list" style="padding-left:0">
 """
