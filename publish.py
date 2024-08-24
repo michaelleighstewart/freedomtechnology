@@ -23,10 +23,10 @@ PRE_HEADER = """
 
 """
 
-HOME_IMAGE = """
+HOME_HEAD_TAGS = """
 <head>
-    <meta name="description" content="Towards a decentralized internet with self-sovereign participants - Extra" /> 
-    <meta name="image" property="og:image" content="https://www.freedomtechnology.org/images/logo.jpg" />
+    <meta name="description" content="Towards a decentralized internet with self-sovereign participants" /> 
+    <meta name="image" property="og:image" content="$root/images/logo.jpg" />
     <meta property="og:type" content="website" />
 </head>
 """
@@ -317,7 +317,7 @@ def make_toc(toc_items, global_config, all_categories, category=None):
         root_path = '..'
     result = (
         PRE_HEADER +
-        HOME_IMAGE.replace('$root', root_path) +
+        HOME_HEAD_TAGS.replace('$root', root_path) +
         make_twitter_card(title_simple, global_config, root_path) +
         RSS_LINK.format(root_path, title_simple) +
         HEADER_TEMPLATE.replace("$root", root_path).replace("$title", title) + 
@@ -330,8 +330,6 @@ def make_toc(toc_items, global_config, all_categories, category=None):
         TOC_END +
         FOOTER
     )
-    print("RESULT IS.....")
-    print(result)
     return result
 
 
