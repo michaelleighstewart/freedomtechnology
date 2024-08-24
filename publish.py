@@ -310,18 +310,22 @@ def make_toc(toc_items, global_config, all_categories, category=None):
         title = global_config['title'] + " | Home"
         title_simple = title = global_config['title']
         root_path = '..'
-    return (
+    result = (
         PRE_HEADER +
+        make_twitter_card(title_simple, global_config, root_path) +
         RSS_LINK.format(root_path, title_simple) +
         HEADER_TEMPLATE.replace("$root", root_path).replace("$title", title) + 
         TOGGLE_COLOR_SCHEME_JS +
-        make_twitter_card(title_simple, global_config, root_path) +
+        # make_twitter_card(title_simple, global_config, root_path) +
         TOC_TITLE_TEMPLATE.format(title, global_config["title"]) +
         # make_categories_header(all_categories, root_path) +
         TOC_START.replace("$root", root_path) +
         ''.join(toc_items) +
         TOC_END
     )
+    print("RESULT IS.....")
+    print(result)
+    return result
 
 
 if __name__ == '__main__':
