@@ -178,7 +178,7 @@ TOC_ITEM_TEMPLATE = """
 TWITTER_CARD_TEMPLATE = """
 <meta property="og:title" content="{0}" />
 <meta property="og:description" content="Towards a decentralized internet with self-sovereign participants" />
-<meta property="og:image" content="$root/images/transparent_logo.png" />
+<meta property="og:image" content="$root/images/logo.jpg" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="{0}" />
 <meta name="twitter:description" content="Towards a decentralized internet with self-sovereign participants" />
