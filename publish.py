@@ -181,7 +181,6 @@ TWITTER_CARD_TEMPLATE = """
 <meta property="og:description" content="Towards a decentralized internet with self-sovereign participants">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="{0}" />
-<meta name="twitter:image" content="https://www.freedomtechnology.org/images/transparent_logo.png" />
 <meta name="twitter:description" content="Towards a decentralized internet with self-sovereign participants" />
 """
 
@@ -310,7 +309,7 @@ def make_toc(toc_items, global_config, all_categories, category=None):
     else:
         title = global_config['title'] + " | Home"
         title_simple = title = global_config['title']
-        root_path = '.'
+        root_path = '..'
     return (
         PRE_HEADER +
         RSS_LINK.format(root_path, title_simple) +
