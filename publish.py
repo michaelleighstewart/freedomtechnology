@@ -7,7 +7,6 @@ PRE_HEADER = """
 <html>
 <meta charset="UTF-8">
 <meta name="description" content="Towards a decentralized internet with self-sovereign participants" /> 
-<meta property="og:image" content="https://www.freedomtechnology.org/images/logo.jpg" />
 <style>
 @media (prefers-color-scheme: dark) {
     body {
