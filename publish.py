@@ -7,6 +7,7 @@ PRE_HEADER = """
 <html>
 <meta charset="UTF-8">
 <meta name="description" content="Towards a decentralized internet with self-sovereign participants"> 
+<meta name="image" property="og:image" content="https://www.freedomtechnology.org/images/transparent_logo.png">
 <style>
 @media (prefers-color-scheme: dark) {
     body {
@@ -180,6 +181,7 @@ TWITTER_CARD_TEMPLATE = """
 <meta property="og:title" content="{0}">
 <meta property="og:description" content="Towards a decentralized internet with self-sovereign participants">
 <meta property="og:image" content="https://www.freedomtechnology.org/images/transparent_logo.png">
+<meta name="image" property="og:image" content="https://www.freedomtechnology.org/images/transparent_logo.png">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="{0}" />
 <meta name="twitter:image" content="https://www.freedomtechnology.org/images/transparent_logo.png" />

@@ -34,7 +34,7 @@
 <br /><hr /><br />
 
 <h2>Setup</h2>
-<p>First, head over to <a href="https://fleek.xyz/" target="_new">fleek.xyz</a> and take a read through their documentation and resources before signing up. Once we have signed up, head over to sites and add a new site from the list of templates. There are several different templates to choose from, including Nuxt, React and Vue boilerplates.For the sake of this example, we are going to use the *Blogmaker by Vitalik* template.</p>
+<p>First, head over to <a href="https://fleek.xyz/" target="_new">fleek.xyz</a> and take a read through their documentation and resources before signing up. Once we have signed up, head over to sites and add a new site from the list of templates. There are several different templates to choose from, including Nuxt, React and Vue boilerplates. For the sake of this example, we are going to use the *Blogmaker by Vitalik* template.</p>
 
 <br />
 <img class="blog-image" src="$root/images/fleek01.png"></img>
