@@ -352,7 +352,7 @@ if __name__ == '__main__':
             RSS_LINK.format(root_path, metadata['title']) +
             HEADER_TEMPLATE.replace('$root', root_path) +
             TOGGLE_COLOR_SCHEME_JS +
-            make_twitter_card(metadata['title'], global_config) +
+            make_twitter_card(metadata['title'], global_config, root_path) +
             TITLE_TEMPLATE.format(global_config['title'] + " | " + metadata['title'], get_printed_date(metadata), root_path) +
             defancify(open('/tmp/temp_output.html').read()) +
             FOOTER
