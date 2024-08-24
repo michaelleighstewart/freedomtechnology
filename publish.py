@@ -6,7 +6,7 @@ PRE_HEADER = """
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8">
-<meta name="description" content="Towards a decentralized internet with self-sovereign participants - Main Description" /> 
+<meta name="description" content="Towards a decentralized internet with self-sovereign participants" /> 
 <style>
 @media (prefers-color-scheme: dark) {
     body {
@@ -22,6 +22,10 @@ PRE_HEADER = """
 }
 </style>
 
+"""
+
+HOME_IMAGE = """
+    <meta property="og:image" content="https://www.freedomtechnology.org/images/logo.jpg" />
 """
 
 HEADER_TEMPLATE = """
@@ -122,7 +126,7 @@ TOGGLE_COLOR_SCHEME_JS = """
 RSS_LINK = """
 
 <link rel="alternate" type="application/rss+xml" href="{0}/feed.xml" title="{1}">
-<meta name="description" content="Towards a decentralized internet with self-sovereign participants - RSS Description"> 
+<meta name="description" content="Towards a decentralized internet with self-sovereign participants"> 
 
 
 """
@@ -176,10 +180,10 @@ TOC_ITEM_TEMPLATE = """
 
 TWITTER_CARD_TEMPLATE = """
 <meta property="og:title" content="{0}" />
-<meta property="og:description" content="Towards a decentralized internet with self-sovereign participants - OG Description" />
+<meta property="og:description" content="Towards a decentralized internet with self-sovereign participants" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="{0}" />
-<meta name="twitter:description" content="Towards a decentralized internet with self-sovereign participants - Twitter Description" />
+<meta name="twitter:description" content="Towards a decentralized internet with self-sovereign participants" />
 """
 
 
@@ -310,6 +314,7 @@ def make_toc(toc_items, global_config, all_categories, category=None):
         root_path = '..'
     result = (
         PRE_HEADER +
+        HOME_IMAGE.replace('$root', root_path) +
         make_twitter_card(title_simple, global_config, root_path) +
         RSS_LINK.format(root_path, title_simple) +
         HEADER_TEMPLATE.replace("$root", root_path).replace("$title", title) + 
