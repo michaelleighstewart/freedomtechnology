@@ -6,7 +6,7 @@ PRE_HEADER = """
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8">
-<meta name="description" content="Towards a decentralized internet with self-sovereign participants" /> 
+<meta name="description" content="Towards a decentralized internet with self-sovereign participants - Main Description" /> 
 <style>
 @media (prefers-color-scheme: dark) {
     body {
@@ -122,7 +122,7 @@ TOGGLE_COLOR_SCHEME_JS = """
 RSS_LINK = """
 
 <link rel="alternate" type="application/rss+xml" href="{0}/feed.xml" title="{1}">
-<meta name="description" content="Towards a decentralized internet with self-sovereign participants"> 
+<meta name="description" content="Towards a decentralized internet with self-sovereign participants - RSS Description"> 
 
 
 """
@@ -177,11 +177,10 @@ TOC_ITEM_TEMPLATE = """
 
 TWITTER_CARD_TEMPLATE = """
 <meta property="og:title" content="{0}" />
-<meta property="og:description" content="Towards a decentralized internet with self-sovereign participants" />
-<meta property="og:image" content="https://www.freedomtechnology.org/images/logo.jpg" />
+<meta property="og:description" content="Towards a decentralized internet with self-sovereign participants - OG Description" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="{0}" />
-<meta name="twitter:description" content="Towards a decentralized internet with self-sovereign participants" />
+<meta name="twitter:description" content="Towards a decentralized internet with self-sovereign participants - Twitter Description" />
 """
 
 
