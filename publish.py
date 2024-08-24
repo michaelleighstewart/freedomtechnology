@@ -179,12 +179,12 @@ TOC_ITEM_TEMPLATE = """
 TWITTER_CARD_TEMPLATE = """
 <meta property="og:title" content="{0}">
 <meta property="og:description" content="Towards a decentralized internet with self-sovereign participants">
-<meta property="og:image" content="$root/images/transparent_logo.png">
+<meta property="og:image" content="https://www.freedomtechnology.org/images/transparent_logo.png">
 <meta property="og:url" content="https://freedomtechnology.org">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="{0}" />
-<meta name="twitter:image" content="$root/images/transparent_logo.png" />
+<meta name="twitter:image" content="https://www.freedomtechnology.org/images/transparent_logo.png" />
 <meta name="twitter:description" content="Towards a decentralized internet with self-sovereign participants" />
 """
 
