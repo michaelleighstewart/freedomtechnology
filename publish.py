@@ -151,7 +151,7 @@ TITLE_TEMPLATE = """
 <h1 style="margin-bottom:7px"> {0} </h1>
 <small style="float:left; color: #888"> {1} </small>
 <br> <br> <br>
-<title> {0} </title>
+<title> {3} </title>
 
 """
 
@@ -314,7 +314,7 @@ def make_toc(toc_items, global_config, all_categories, category=None):
     else:
         title = global_config['title'] + " | Home"
         title_simple = title = global_config['title']
-        root_path = '..'
+        root_path = '.'
     result = (
         PRE_HEADER +
         HOME_HEAD_TAGS.replace('$root', root_path) +
@@ -363,7 +363,7 @@ if __name__ == '__main__':
             HEADER_TEMPLATE.replace('$root', root_path) +
             TOGGLE_COLOR_SCHEME_JS +
             make_twitter_card(metadata['title'], global_config, root_path) +
-            TITLE_TEMPLATE.format(global_config['title'] + " | " + metadata['title'], get_printed_date(metadata), root_path) +
+            TITLE_TEMPLATE.format(metadata['title'], get_printed_date(metadata), root_path, global_config['title'] + " | " + metadata['title']) +
             defancify(open('/tmp/temp_output.html').read()) +
             FOOTER
         ).replace('$root', root_path)
