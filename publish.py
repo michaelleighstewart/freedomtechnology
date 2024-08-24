@@ -25,7 +25,7 @@ PRE_HEADER = """
 """
 
 HOME_IMAGE = """
-    <meta property="og:image" content="https://www.freedomtechnology.org/images/logo.jpg" />
+    <meta name="image" property="og:image" content="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" />
 """
 
 HEADER_TEMPLATE = """
