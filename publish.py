@@ -158,7 +158,6 @@ TOC_TITLE_TEMPLATE = """
 FOOTER = """ </div> """
 
 TOC_START = """
-<img src="$root/images/transparent_logo.png" class="left-image"></img>
 <br>
     <ul class="post-list" style="padding-left:0">
 """
@@ -177,8 +176,9 @@ TOC_ITEM_TEMPLATE = """
 """
 
 TWITTER_CARD_TEMPLATE = """
-<meta property="og:title" content="{0}">
-<meta property="og:description" content="Towards a decentralized internet with self-sovereign participants">
+<meta property="og:title" content="{0}" />
+<meta property="og:description" content="Towards a decentralized internet with self-sovereign participants" />
+<meta property="og:image" content="$root/images/transparent_logo.png" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="{0}" />
 <meta name="twitter:description" content="Towards a decentralized internet with self-sovereign participants" />
