@@ -33,6 +33,11 @@ HEADER_TEMPLATE = """
 <link rel="stylesheet" type="text/css" href="$root/css/global.css">
 <link rel="stylesheet" type="text/css" href="$root/css/misc.css">
 <link rel="icon" type="image/x-icon" href="$root/images/favicon.ico">
+<meta property="og:title" content="Freedom Technology">
+<meta property="og:description" content="Towards a decentralized internet with self-sovereign participants">
+<meta property="og:image" content="https://www.freedomtechnology.org/images/transparent_logo.png">
+<meta property="og:url" content="https://freedomtechnology.org">
+<meta property="og:type" content="website">
 
 <script type="text/x-mathjax-config">
 <script>
