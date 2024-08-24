@@ -270,7 +270,7 @@ def generate_feed(global_config, metadatas):
 
 
 
-def make_twitter_card(title, global_config):
+def make_twitter_card(title, global_config, root_path):
     return TWITTER_CARD_TEMPLATE.format(title, global_config['icon']).replace("$root", root_path)
 
 
@@ -304,15 +304,17 @@ def make_toc_item(global_config, metadata, root_path):
 def make_toc(toc_items, global_config, all_categories, category=None):
     if category:
         title = global_config['title'] + " | " + category.capitalize()
+        title_simple = global_config['title'] + " | " + category.capitalize()
         root_path = '..'
     else:
         title = global_config['title'] + " | Home"
+        title_simple = title = global_config['title']
         root_path = '.'
     return (
         RSS_LINK.format(root_path, title) +
         HEADER_TEMPLATE.replace("$root", root_path).replace("$title", title) + 
         TOGGLE_COLOR_SCHEME_JS +
-        make_twitter_card(title, global_config) +
+        make_twitter_card(title_simple, global_config, root_path) +
         TOC_TITLE_TEMPLATE.format(title, global_config["title"]) +
         # make_categories_header(all_categories, root_path) +
         TOC_START +
