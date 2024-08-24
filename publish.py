@@ -311,7 +311,7 @@ def make_toc(toc_items, global_config, all_categories, category=None):
         title_simple = title = global_config['title']
         root_path = '.'
     return (
-        RSS_LINK.format(root_path, title) +
+        RSS_LINK.format(root_path, title=title_simple) +
         HEADER_TEMPLATE.replace("$root", root_path).replace("$title", title) + 
         TOGGLE_COLOR_SCHEME_JS +
         make_twitter_card(title_simple, global_config, root_path) +
