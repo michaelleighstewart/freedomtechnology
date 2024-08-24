@@ -33,11 +33,10 @@ HOME_HEAD_TAGS = """
 
 ARTICLE_HEAD_TAGS = """
 <head>
-    <meta name="description" content="Test Desc" /> 
-    <meta property="og:description" content="Test Desc 2" /> 
-    <meta name="title" content="Test Title" />
-    <meta property="og:title" content="Test Title 2" /> 
-    <meta name="image" property="og:image" content="/images/logo.jpg" />
+    <meta name="description" content="{1}" /> 
+    <meta property="og:description" content="{1}" /> 
+    <meta name="title" content="{0}" />
+    <meta property="og:title" content="{0}" /> 
     <meta property="og:type" content="article" />
 </head>
 """
@@ -195,7 +194,7 @@ TOC_ITEM_TEMPLATE = """
 TWITTER_CARD_TEMPLATE = """
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="{0}" />
-<meta name="twitter:description" content="Towards a decentralized internet with self-sovereign participants 3" />
+<meta name="twitter:description" content="Towards a decentralized internet with self-sovereign participants" />
 """
 
 
@@ -370,7 +369,7 @@ if __name__ == '__main__':
         root_path = '../../../..'
         total_file_contents = (
             PRE_HEADER +
-            ARTICLE_HEAD_TAGS.replace('$root', root_path) +
+            ARTICLE_HEAD_TAGS.format(global_config['title'] + " | " + metadata['title'], "Towards a decentralized internet with self-sovereign participants") +
             RSS_LINK.format(root_path, metadata['title']) +
             HEADER_TEMPLATE.replace('$root', root_path) +
             TOGGLE_COLOR_SCHEME_JS +
