@@ -6,7 +6,6 @@ PRE_HEADER = """
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8">
-<meta name="description" content="Towards a decentralized internet with self-sovereign participants" /> 
 <style>
 @media (prefers-color-scheme: dark) {
     body {
@@ -25,7 +24,11 @@ PRE_HEADER = """
 """
 
 HOME_IMAGE = """
+<head>
+    <meta name="description" content="Towards a decentralized internet with self-sovereign participants - Extra" /> 
     <meta name="image" property="og:image" content="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" />
+    <meta property="og:type" content="website" />
+</head>
 """
 
 HEADER_TEMPLATE = """
