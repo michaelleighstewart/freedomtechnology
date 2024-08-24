@@ -6,7 +6,8 @@ PRE_HEADER = """
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8">
-<meta name="description" content="Towards a decentralized internet with self-sovereign participants"> 
+<meta name="description" content="Towards a decentralized internet with self-sovereign participants" /> 
+<meta property="og:image" content="https://www.freedomtechnology.org/images/logo.jpg" />
 <style>
 @media (prefers-color-scheme: dark) {
     body {
@@ -73,7 +74,7 @@ MathJax = {
 </div>
 <div class="outer">
     <div class="left">
-        <img src="$root/images/logo.jpg" alt="Logo2" class="left-image"></img>
+        <img src="$root/images/transparent_logo.png" alt="Logo" class="left-image"></img>
     </div>
     <div class="right">
 """
