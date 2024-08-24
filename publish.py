@@ -73,7 +73,6 @@ MathJax = {
 </div>
 <div class="outer">
     <div class="left">
-        <img src="$root/images/transparent_logo.png" alt="Logo" class="left-image"></img>
         <img src="$root/images/logo.jpg" alt="Logo2" class="left-image"></img>
     </div>
     <div class="right">
