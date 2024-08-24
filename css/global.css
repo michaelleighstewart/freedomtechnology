@@ -148,6 +148,10 @@ html.dark #doc img.invert {
   text-align: center;
 }
 
+body {
+  font-size: 16px;
+}
+
 /*
   Color Scheme Toggle Switch
   - Styled checkbox with slight animation when toggling
