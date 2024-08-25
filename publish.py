@@ -44,7 +44,7 @@ ARTICLE_HEAD_TAGS = """
     <meta name="title" content="{0}" />
     <meta property="og:title" content="{0}" /> 
     <meta property="og:description" content="{1}" />
-    <meta
+    <meta property="og:image" content="{2}" />
     <meta property="og:type" content="article" />
 </head>
 """
