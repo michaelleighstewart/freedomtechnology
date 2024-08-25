@@ -45,6 +45,7 @@ ARTICLE_HEAD_TAGS = """
     <meta property="og:title" content="{0}" /> 
     <meta property="og:description" content="{1}" />
     <meta property="og:image" content="{2}" />
+    <meta property="og:url" content="{3}" />
     <meta property="og:type" content="article" />
 </head>
 """
@@ -261,7 +262,7 @@ def metadata_to_path(global_config, metadata):
     return os.path.join(
         global_config.get('posts_directory', 'posts'),
         metadata['date'],
-        metadata['filename']
+        metadata['slug']
     )
 
 
@@ -375,9 +376,12 @@ if __name__ == '__main__':
 
         os.system('pandoc -o /tmp/temp_output.html {} {}'.format(file_location, options))
         root_path = '../../../..'
+        truncated_path = os.path.split(path)[0] + '/' + metadata['slug']
         total_file_contents = (
             PRE_HEADER +
-            ARTICLE_HEAD_TAGS.format(global_config['title'] + " | " + metadata['title'], metadata['blurb'], metadata['image'].replace('$root', root_path)) +
+            ARTICLE_HEAD_TAGS.format(global_config['title'] + " | " + metadata['title'], 
+                                     metadata['blurb'], metadata['image'].replace('$root', root_path),
+                                     truncated_path) +
             RSS_LINK.format(root_path, metadata['title']) +
             HEADER_TEMPLATE.replace('$root', root_path) +
             TOGGLE_COLOR_SCHEME_JS +
@@ -390,11 +394,12 @@ if __name__ == '__main__':
         print("Path selected: {}".format(path))
 
         # Make sure target directory exists
-        truncated_path = os.path.split(path)[0]
+        print("truncated path is: ")
+        print(truncated_path)
         os.system('mkdir -p {}'.format(os.path.join('site', truncated_path)))
 
         # Put it in the desired location
-        out_location = os.path.join('site', path)
+        out_location = os.path.join('site', truncated_path + '/index.html')
         open(out_location, 'w').write(total_file_contents)
 
     # Reset ToC
