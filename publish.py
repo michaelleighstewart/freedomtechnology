@@ -31,11 +31,20 @@ HOME_HEAD_TAGS = """
 </head>
 """
 
+# ARTICLE_HEAD_TAGS = """
+# <head>
+#     <meta name="title" content="{0}" />
+#     <meta name="image" property="og:image" content="/images/logo.jpg" />
+#     <meta property="og:title" content="{0}" /> 
+#    <meta property="og:type" content="article" />
+# </head>
+# """
 ARTICLE_HEAD_TAGS = """
 <head>
     <meta name="title" content="{0}" />
-    <meta name="image" property="og:image" content="/images/logo.jpg" />
     <meta property="og:title" content="{0}" /> 
+    <meta property="og:description" content="{1}" />
+    <meta
     <meta property="og:type" content="article" />
 </head>
 """
@@ -368,7 +377,7 @@ if __name__ == '__main__':
         root_path = '../../../..'
         total_file_contents = (
             PRE_HEADER +
-            ARTICLE_HEAD_TAGS.format(global_config['title'] + " | " + metadata['title'], "Towards a decentralized internet with self-sovereign participants") +
+            ARTICLE_HEAD_TAGS.format(global_config['title'] + " | " + metadata['title'], metadata['blurb'], metadata['image'].replace('$root', root_path)) +
             RSS_LINK.format(root_path, metadata['title']) +
             HEADER_TEMPLATE.replace('$root', root_path) +
             TOGGLE_COLOR_SCHEME_JS +
