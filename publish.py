@@ -84,7 +84,7 @@ MathJax = {
         </div>
     </div>
     <div class="header-right">
-        <span class="toc-category" style="font-size:24px"><a href="$root/index.html">Home</a></span>
+        <span class="toc-category" style="font-size:24px"><a href="$root">Home</a></span>
     </div>
 </div>
 <div class="outer">
