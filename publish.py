@@ -375,7 +375,7 @@ if __name__ == '__main__':
         options = metadata.get('pandoc', '')
 
         os.system('pandoc -o /tmp/temp_output.html {} {}'.format(file_location, options))
-        root_path = '../../../..'
+        root_path = '../../../../..'
         truncated_path = os.path.split(path)[0] + '/' + metadata['slug']
         total_file_contents = (
             PRE_HEADER +
