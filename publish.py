@@ -28,9 +28,9 @@ HOME_HEAD_TAGS = """
     <meta name="description" content="{1}" /> 
     <meta name="image" property="og:image" content="{2}" />
     <meta property="og:type" content="website" />
-    <meta name="twitter:title" content="{0}" />
-    <meta name="twitter:image" content="{3}" />
-    <meta name="twitter:description" content="{1}" />
+    <meta name="twitter:title" property="twitter:title" content="{0}" />
+    <meta name="twitter:image" property="twitter:image" content="{3}" />
+    <meta name="twitter:description" property="twitter:description" content="{1}" />
 </head>
 """
 
@@ -47,12 +47,12 @@ ARTICLE_HEAD_TAGS = """
     <meta name="title" content="{0}" />
     <meta property="og:title" content="{0}" /> 
     <meta property="og:description" content="{1}" />
-    <meta property="og:image" content="{2}" />
+    <meta property="og:image" content="{4}" />
     <meta property="og:url" content="{3}" />
     <meta property="og:type" content="article" />
-    <meta name="twitter:title" content="{0}" />
-    <meta name="twitter:image" content="{4}" />
-    <meta name="twitter:description" content="{1}" />
+    <meta name="twitter:title" property="twitter:title" content="{0}" />
+    <meta name="twitter:image" property="twitter:image" content="{4}" />
+    <meta name="twitter:description" property="twitter:description" content="{1}" />
 </head>
 """
 
