@@ -48,7 +48,7 @@ ARTICLE_HEAD_TAGS = """
     <meta property="og:url" content="{3}" />
     <meta property="og:type" content="article" />
     <meta name="twitter:title" content="{0}" />
-    <meta name="twitter:image" content="{2}" />
+    <meta name="twitter:image" content="https://freedomtechnology.org/images/ipfs_network_small.jpg" />
     <meta name="twitter:description" content="{1}" />
 </head>
 """
