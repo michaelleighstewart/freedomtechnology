@@ -29,7 +29,7 @@ HOME_HEAD_TAGS = """
     <meta name="image" property="og:image" content="{2}" />
     <meta property="og:type" content="website" />
     <meta name="twitter:title" content="{0}" />
-    <meta name="twitter:image" content="{2}" />
+    <meta name="twitter:image" content="{3}" />
     <meta name="twitter:description" content="{1}" />
 </head>
 """
@@ -343,7 +343,7 @@ def make_toc(toc_items, global_config, all_categories, category=None):
         abs_root_path = '.'
     result = (
         PRE_HEADER +
-        HOME_HEAD_TAGS.format(global_config["title"], global_config["description"], global_config["main_image"]).replace('$root', abs_root_path) +
+        HOME_HEAD_TAGS.format(global_config["title"], global_config["description"], global_config["main_image"], global_config["main_twitter_image"]).replace('$root', abs_root_path) +
         # make_twitter_card(title_simple, global_config, root_path) +
         RSS_LINK.format(root_path, title_simple, title_simple) +
         HEADER_TEMPLATE.replace("$root", root_path).replace("$title", title) + 

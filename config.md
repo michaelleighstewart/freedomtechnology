@@ -1,6 +1,7 @@
 [title]: <> (Freedom Technology)
 [description]: <> (Towards a decentralized internet with self-sovereign participants)
 [main_image]: <> (/images/logo.jpg)
+[main_twitter_image]: <> (https://freedomtechnology.org/images/logo.jpg)
 [domain](http://localhost)
 [posts_directory](./posts)
 [icon]('')
