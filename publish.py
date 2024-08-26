@@ -31,6 +31,7 @@ HOME_HEAD_TAGS = """
     <meta name="twitter:title" property="twitter:title" content="{0}" />
     <meta name="twitter:image" property="twitter:image" content="{3}" />
     <meta name="twitter:description" property="twitter:description" content="{1}" />
+    <meta name="twitter:card" content="summary_large_image" />
 </head>
 """
 
@@ -53,7 +54,7 @@ ARTICLE_HEAD_TAGS = """
     <meta name="twitter:title" property="twitter:title" content="{0}" />
     <meta name="twitter:image" property="twitter:image" content="{4}" />
     <meta name="twitter:description" property="twitter:description" content="{1}" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
 </head>
 """
 
