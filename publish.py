@@ -151,7 +151,7 @@ TOGGLE_COLOR_SCHEME_JS = """
 RSS_LINK = """
 
 <link rel="alternate" type="application/rss+xml" href="{0}/feed.xml" title="{1}">
-<meta name="description" content="Towards a decentralized internet with self-sovereign participants"> 
+<meta name="description" content="{2}"> 
 
 
 """
@@ -342,7 +342,7 @@ def make_toc(toc_items, global_config, all_categories, category=None):
         PRE_HEADER +
         HOME_HEAD_TAGS.replace('$root', abs_root_path) +
         make_twitter_card(title_simple, global_config, root_path) +
-        RSS_LINK.format(root_path, metadata['blurb']) +
+        RSS_LINK.format(root_path, title_simple, title_simple) +
         HEADER_TEMPLATE.replace("$root", root_path).replace("$title", title) + 
         TOGGLE_COLOR_SCHEME_JS +
         # make_twitter_card(title_simple, global_config, root_path) +
@@ -386,7 +386,7 @@ if __name__ == '__main__':
             ARTICLE_HEAD_TAGS.format(global_config['title'] + " | " + metadata['title'], 
                                      metadata['blurb'], metadata['image'].replace('$root', root_path),
                                      truncated_path, metadata['twitter_image']) +
-            RSS_LINK.format(root_path, metadata['title']) +
+            RSS_LINK.format(root_path, metadata['title'], metadata['blurb']) +
             HEADER_TEMPLATE.replace('$root', root_path) +
             TOGGLE_COLOR_SCHEME_JS +
             make_twitter_card(metadata['title'], global_config, root_path) +
