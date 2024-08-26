@@ -53,7 +53,7 @@ ARTICLE_HEAD_TAGS = """
     <meta name="twitter:title" property="twitter:title" content="{0}" />
     <meta name="twitter:image" property="twitter:image" content="{4}" />
     <meta name="twitter:description" property="twitter:description" content="{1}" />
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
 </head>
 """
 
@@ -393,7 +393,7 @@ if __name__ == '__main__':
             RSS_LINK.format(root_path, metadata['title'], metadata['blurb']) +
             HEADER_TEMPLATE.replace('$root', root_path) +
             TOGGLE_COLOR_SCHEME_JS +
-            make_twitter_card(metadata['title'], global_config, root_path) +
+            # make_twitter_card(metadata['title'], global_config, root_path) +
             TITLE_TEMPLATE.format(metadata['title'], get_printed_date(metadata), root_path, global_config['title'] + " | " + metadata['title']) +
             defancify(open('/tmp/temp_output.html').read()) +
             FOOTER
