@@ -48,7 +48,7 @@ ARTICLE_HEAD_TAGS = """
     <meta property="og:url" content="{3}" />
     <meta property="og:type" content="article" />
     <meta name="twitter:title" content="{0}" />
-    <meta name="twitter:image" content="https://freedomtechnology.org/images/ipfs_network_small.jpg" />
+    <meta name="twitter:image" content="{4}" />
     <meta name="twitter:description" content="{1}" />
 </head>
 """
@@ -342,7 +342,7 @@ def make_toc(toc_items, global_config, all_categories, category=None):
         PRE_HEADER +
         HOME_HEAD_TAGS.replace('$root', abs_root_path) +
         make_twitter_card(title_simple, global_config, root_path) +
-        RSS_LINK.format(root_path, title_simple) +
+        RSS_LINK.format(root_path, metadata['blurb']) +
         HEADER_TEMPLATE.replace("$root", root_path).replace("$title", title) + 
         TOGGLE_COLOR_SCHEME_JS +
         # make_twitter_card(title_simple, global_config, root_path) +
@@ -385,7 +385,7 @@ if __name__ == '__main__':
             PRE_HEADER +
             ARTICLE_HEAD_TAGS.format(global_config['title'] + " | " + metadata['title'], 
                                      metadata['blurb'], metadata['image'].replace('$root', root_path),
-                                     truncated_path) +
+                                     truncated_path, metadata['twitter_image']) +
             RSS_LINK.format(root_path, metadata['title']) +
             HEADER_TEMPLATE.replace('$root', root_path) +
             TOGGLE_COLOR_SCHEME_JS +
