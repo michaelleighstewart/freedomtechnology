@@ -47,6 +47,9 @@ ARTICLE_HEAD_TAGS = """
     <meta property="og:image" content="{2}" />
     <meta property="og:url" content="{3}" />
     <meta property="og:type" content="article" />
+    <meta name="twitter:title" content="{0}" />
+    <meta name="twitter:image" content="{2}" />
+    <meta name="twitter:description" content="{1}" />
 </head>
 """
 
@@ -203,6 +206,7 @@ TOC_ITEM_TEMPLATE = """
 TWITTER_CARD_TEMPLATE = """
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="{0}" />
+<meta name="twitter:image" content="{1}" />
 <meta name="twitter:description" content="Towards a decentralized internet with self-sovereign participants" />
 """
 
@@ -293,7 +297,7 @@ def generate_feed(global_config, metadatas):
 
 
 def make_twitter_card(title, global_config, root_path):
-    return TWITTER_CARD_TEMPLATE.format(title, global_config['icon']).replace("$root", root_path)
+    return TWITTER_CARD_TEMPLATE.format(title, metadata['image']).replace("$root", root_path)
 
 
 def defancify(text):
