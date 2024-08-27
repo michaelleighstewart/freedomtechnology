@@ -10,7 +10,7 @@
 
 <br />
 <img class="blog-image" src="$root/images/telegram01.png" alt="Source: Reuters"></img>
-<br />
+<br /><br />
 
 <br /><hr /><br />
 
@@ -46,7 +46,7 @@
 
 <br />
 <img class="blog-image" src="$root/images/telegram02.png" alt="Source: derGigi on Nostr, npub: npub1dergggklka99wwrs92yz8wdjs952h2ux2ha2ed598ngwu9w7a6fsh9xzpc"></img>
-<br />
+<br /><br />
 
 
 <h2>Why is this Important?</h2>
@@ -55,6 +55,12 @@
 <p>In 2013, <a href="https://en.wikipedia.org/wiki/Ross_Ulbricht" target="_new">Ross Ulbricht</a> (also known by the pseudonym "Dread Pirate Roberts"), was arrested and ultimately imprisoned by US authorities for multiple similar charges, including money laundering, conspiracy to commit computer hacking and conspiracy to traffic narcotics. Ulbricht founded and ran The Silk Road, an online black market that operated on the Dark Web from 2011. An argument has persisted since then about Ulbricht's imprisonment, especially amongst libertarians and Bitcoiners (which was the main currency of The Silk Road during it's operations), with Donald Trump promising at the 2024 Bitcoin Conference that he would free Ross on day one of his presidency if he is to win the election.</p>
 
 <p>More recently, the cryptocurrency space has seen multiple arrests of founders and developers who have built privacy-focus applications on top of the Bitcoin network. In April, the founders of the Bitcoin privacy wallet Samourai were arrested on charges of money laundering. In May, Tornado Cash developer Alexey Pertsev was sentenced to 64 months in prison on the same charge.</p>
+
+<p>In response to Durov's arrest, Chris Pavlokski, founder and CEO of YouTube alternative <a href="https://rumble.com/" target="_new">Rumble</a> — which bills itself as being immune to 'cancel culture' — announced on X that he has 'departed from Europe' stating that France has 'threatened' Rumble.</p>
+
+<br />
+<img class="blog-image" src="$root/images/telegram03.png" alt="Source: X"></img>
+<br /><br />
 
 <p>This string of events raises significant ethical and philosophical questions around our ability to communicate freely. The debate continues; meanwhile it is arguable that this arrest is just another attack in an increasingly authoritarian and less private world against our freedom, leading us in a dangerous direction where the ability to communicate and transact with whoever we please without oppressive surveillance appears to be at risk.</p>
 
