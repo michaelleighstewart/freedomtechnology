@@ -24,7 +24,7 @@
 <br /><hr /><br />
 
 <h2>Telegram</h2>
-<p>Pavel and his brother Nikolai founded Telegram in 2013. The emphasis of the app was to preserve security and privacy, providing end-to-end encryption for private chats. After leaving Russia, Pavel obtained citizenship from Saint Kitts and Nevis (a small Caribbean island) and based the company out of Germany. A few year later, he would leave Europe again, to UAE, saying that he couldn't hire the people he wanted while in Europe due to strict immigration policies.</p>
+<p>Pavel and his brother Nikolai founded Telegram in 2013. The emphasis of the app was to preserve security and privacy, providing end-to-end encryption for private chats. After leaving Russia, Pavel obtained citizenship from Saint Kitts and Nevis (a small Caribbean island) and based the company out of Germany. A few years later, he would leave Europe again, to UAE, saying that he couldn't hire the people he wanted while in Europe due to strict immigration policies.</p>
 
 <p>Since 2022, Telegram has become an unfiltered source of information about the war in Ukraine, with both Russian and Ukrainian citizens and people in positions of power using it to share content - some of which is graphic or misleading. This has caused further pressure coming from Russia to the company to share private data, with it's foreign ministry sending a note to Paris demanding access to Durov.</p>
 
