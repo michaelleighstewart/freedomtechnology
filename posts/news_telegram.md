@@ -3,7 +3,7 @@
 [title]: <> (Telegram Founder Arrested by Authorities in France)
 [blurb]: <> (Pavel Durov, the founder and CEO of the "private" messaging app Telegram has been arrested by French authorities on Saturday evening. He faces the potential of up to 20 years in prison. The claim is that Telegram has a lack of moderation and therefore has been an accomplice to drug trafficking, fraud, conspiracy, money laundering and more. How a messaging app can both remain private and provide moderation remains a mystery.)
 [image]: <> ($root/images/telegram01.jpg)
-[slug]: <> (decentralized-web-hosting-with-ipfs)
+[slug]: <> (telegram-founder-arrested)
 [twitter_image]: <> (https://freedomtechnology.org/images/telegram01.jpg)
 
 <p>Pavel Durov, the founder and CEO of the "private" messaging app Telegram has been arrested by French authorities on Saturday evening. He faces the potential of up to 20 years in prison. The claim is that Telegram has a lack of moderation and therefore has been an accomplice to drug trafficking, fraud, conspiracy, money laundering and more. How a messaging app can both remain private and provide moderation remains a mystery.</p>
